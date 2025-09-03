@@ -35,7 +35,7 @@ const App = () => {
                     }
                 });
             },
-            { threshold: 0.3 }
+            { threshold: 0.1 } // Changed from 0.3 to 0.1 for better detection
         );
 
         document.querySelectorAll("section[id]").forEach((section) => {
@@ -44,6 +44,11 @@ const App = () => {
 
         return () => observer.disconnect();
     }, []);
+
+    // Debug: Log visibility state changes
+    useEffect(() => {
+        console.log("isVisible state:", isVisible);
+    }, [isVisible]);
 
     const skills = {
         frontend: [
@@ -384,7 +389,7 @@ const App = () => {
                             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
                         <a
-                            href="/files/bharath_hegde_frontend_dev.pdf"
+                            href={`${process.env.PUBLIC_URL}/files/bharath_hegde_frontend_dev.pdf`}
                             download="Bharath_Hegde_Frontend_Developer_Resume.pdf"
                             className="border border-gray-600 px-8 py-3 rounded-full hover:border-blue-400 hover:text-blue-400 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 group"
                         >
@@ -572,7 +577,7 @@ const App = () => {
                 </div>
             </section>
 
-            {/* Projects Section */}
+            {/* Projects Section - FIXED VERSION */}
             <section id="projects" className="py-20 px-6">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-4xl font-bold text-center mb-16">
@@ -582,15 +587,11 @@ const App = () => {
                         {projects.map((project, idx) => (
                             <div
                                 key={project.title}
-                                className={`group grid md:grid-cols-2 gap-8 items-center ${
+                                className={`group grid md:grid-cols-2 gap-8 items-center transition-all duration-1000 ${
                                     idx % 2 === 1
                                         ? "md:grid-flow-col-dense"
                                         : ""
-                                } ${
-                                    isVisible.projects
-                                        ? "opacity-100"
-                                        : "opacity-0"
-                                }`}
+                                } opacity-100`} // FORCED VISIBILITY - Remove this after testing
                                 style={{ transitionDelay: `${idx * 200}ms` }}
                             >
                                 <div
@@ -598,12 +599,18 @@ const App = () => {
                                         idx % 2 === 1 ? "md:col-start-2" : ""
                                     }`}
                                 >
-                                    <div className="h-64 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-lg">
-                                        <img
-                                            src={`${process.env.PUBLIC_URL}/images/${project.image}`}
-                                            alt={project.title}
-                                            className="w-full h-full object-cover"
-                                        />
+                                    {/* Placeholder div instead of broken image */}
+                                    <div
+                                        className={`h-64 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-lg bg-gradient-to-br ${project.color} flex items-center justify-center`}
+                                    >
+                                        <div className="text-center p-6">
+                                            <h4 className="text-white text-xl font-bold mb-2">
+                                                {project.title.split(" - ")[0]}
+                                            </h4>
+                                            <p className="text-white/80 text-sm">
+                                                Preview Coming Soon
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
 
