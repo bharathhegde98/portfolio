@@ -599,18 +599,12 @@ const App = () => {
                                         idx % 2 === 1 ? "md:col-start-2" : ""
                                     }`}
                                 >
-                                    {/* Placeholder div instead of broken image */}
-                                    <div
-                                        className={`h-64 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-lg bg-gradient-to-br ${project.color} flex items-center justify-center`}
-                                    >
-                                        <div className="text-center p-6">
-                                            <h4 className="text-white text-xl font-bold mb-2">
-                                                {project.title.split(" - ")[0]}
-                                            </h4>
-                                            <p className="text-white/80 text-sm">
-                                                Preview Coming Soon
-                                            </p>
-                                        </div>
+                                    <div className="h-64 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-lg">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/images/${project.image}`}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
                                 </div>
 
