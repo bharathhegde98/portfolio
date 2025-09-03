@@ -600,7 +600,7 @@ const App = () => {
                                 >
                                     <div className="h-64 rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300 shadow-lg">
                                         <img
-                                            src={`/images/${project.image}`}
+                                            src={`${process.env.PUBLIC_URL}/images/${project.image}`}
                                             alt={project.title}
                                             className="w-full h-full object-cover"
                                         />
