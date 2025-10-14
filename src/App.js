@@ -52,14 +52,17 @@ const App = () => {
 
     const skills = {
         frontend: [
+            "React.js",
+            "TypeScript",
+            "JavaScript ES6",
             "HTML5",
             "CSS3",
-            "JavaScript ES6",
-            "React.js",
+            "Sass",
+            "Redux",
             "jQuery",
             "Responsive Design",
         ],
-        frameworks: ["Bootstrap 5", "Tailwind CSS", "Mobile-First Design"],
+        frameworks: ["Bootstrap 5", "Tailwind CSS"],
         tools: ["Git", "GitHub", "REST APIs", "AJAX", "Figma", "Adobe XD"],
         backend: ["Node.js", "Express.js", "PHP", "MySQL", "MongoDB"],
         cms: ["WordPress", "TYPO3"],
@@ -85,7 +88,7 @@ const App = () => {
                 "User Authentication",
                 "Responsive Design",
             ],
-            url: "https://github.com/bharathhegde98/shopmart",
+            url: "https://bharathhegde98.github.io/shopmart/",
             color: "from-blue-500 to-purple-600",
         },
         {
@@ -166,8 +169,8 @@ const App = () => {
     ];
 
     const experience = {
-        company: "Satvam Softwares",
-        role: "Frontend Web Developer",
+        company: "Satvam Softwares Private Limited",
+        role: "Frontend Developer",
         duration: "August 2022 – Present",
         location: "Bengaluru, Karnataka",
         achievements: [
