@@ -103,7 +103,7 @@ const App = () => {
                 "PageSpeed Optimization",
                 "ACF Integration",
             ],
-            url: "https://bonafinca.com/",
+            url: "https://proventis.com/",
             color: "from-green-500 to-teal-600",
         },
         {
