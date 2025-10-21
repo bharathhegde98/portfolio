@@ -112,7 +112,7 @@ const App = () => {
                 "Built multilingual real estate platform with OnOffice API integration for dynamic property listings. Developed custom frontend components with advanced filtering.",
             tech: [
                 "Typo3",
-                "jQuery",
+                "React.js",
                 "OnOffice API",
                 "CSS3",
                 "AJAX",
