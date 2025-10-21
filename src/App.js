@@ -57,7 +57,6 @@ const App = () => {
             "JavaScript ES6",
             "HTML5",
             "CSS3",
-            "Sass",
             "Redux",
             "jQuery",
             "Responsive Design",
