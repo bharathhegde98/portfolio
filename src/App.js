@@ -53,11 +53,9 @@ const App = () => {
     const skills = {
         frontend: [
             "React.js",
-            "TypeScript",
-            "JavaScript ES6",
+            "JavaScript",
             "HTML5",
             "CSS3",
-            "Redux",
             "jQuery",
             "Responsive Design",
         ],
